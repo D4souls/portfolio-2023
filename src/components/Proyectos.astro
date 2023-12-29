@@ -1,0 +1,163 @@
+---
+import Badges from "./Badges.astro";
+import Mysql from "./img/Mysql.astro";
+import Php from "./img/Php.astro";
+import Html from "./img/Html.astro";
+import Css from "./img/Css.astro";
+import Link from "./img/Link.astro";
+import AstroIcon from "./img/AstroIcon.astro";
+import Tailwind from "./img/Tailwind.astro";
+import Angular from "./img/Angular.astro";
+import Javascript from "./img/Javascript.astro";
+import Nolink from "./img/Nolink.astro";
+import Code from "./img/Code.astro";
+---
+
+<div class="flex flex-col lg:w-[733px] w-auto m-4 text-black justify-center items-center">
+  <h3 class="text-black font-semibold text-3xl self-start pb-2 flex flex-row justify-center items-center gap-1"><Code/>Proyectos</h3>
+  <div class="grid lg:grid-cols-2 gap-2 drop-shadow-xl grid-cols-1">
+    <div
+      class="lg:col-span-2 border flex flex-col justify-center items-center bg-white rounded-md p-2 hover:scale-105 transition gap-2"
+    >
+      <div class="overflow-y-hidden h-32 rounded-md">
+        <img
+          src="../../public/previewCuandoLibro.webp"
+          alt="ejemploCuandoLibro"
+          class="bg-top"
+          loading="lazy"
+        />
+      </div>
+      <a
+        href="https://github.com/D4souls/cuandoLibro"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-2xl font-semibold self-start flex flex-row justify-center items-center"
+      >
+        <Link />
+         CuandoLibro
+      </a>
+      <span class="self-start text-gray-500 font-normal text-md"
+        >Aplicación vía web para la administración de una pequeña empresa. Con
+        esta aplicación podrás desde crear un usuario hasta gestionar las
+        nóminas de cada mes.</span
+      >
+      <div
+        class="flex flex-row justify-center items-center gap-4 flex-wrap"
+      >
+        <Badges class="bg-blue-700">
+          <Php />
+           Php
+        </Badges>
+        <Badges class="bg-yellow-500">
+          <Javascript />
+           JavaScript
+        </Badges>
+        <Badges class="bg-orange-500">
+          <Html />
+           HTML
+        </Badges>
+        <Badges class="bg-sky-500">
+          <Css />
+           CSS
+        </Badges>
+        <Badges class="bg-gray-400">
+          <Mysql />
+           MYSQL
+        </Badges>
+      </div>
+      <footer class="text-md text-gray-400">
+        Fecha de publicación: 10/12/2023
+      </footer>
+    </div>
+
+    <div
+      class="col-span-1 border flex flex-col justify-center items-center bg-white rounded-md p-2 hover:scale-105 transition gap-2"
+    >
+      <div class="overflow-y-hidden h-32 rounded-md">
+        <img
+          src="../../public/previewportfolio.webp"
+          alt="previewPortfolio"
+          loading="lazy"
+        />
+      </div>
+      <a
+        href="https://github.com/D4souls/portfolio-2023"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-2xl font-semibold self-start flex flex-row justify-center items-center"
+      >
+        <Link />
+         Portfolio
+      </a>
+      <span class="self-start text-gray-500 font-normal text-md"
+        >Desarrollo de portfolio personal donde se muestra información sobre mi,
+        estudios y proyectos.</span
+      >
+      <div
+        class="flex flex-row justify-center items-center gap-4 flex-wrap flex-shrink"
+      >
+        <Badges class="bg-black">
+          <AstroIcon />
+           Astro
+        </Badges>
+        <Badges class="bg-orange-500">
+          <Html />
+           HTML
+        </Badges>
+        <Badges class="bg-sky-500">
+          <Css />
+           CSS
+        </Badges>
+        <Badges class="bg-blue-950">
+          <Tailwind />
+           Tailwind
+        </Badges>
+      </div>
+      <footer class="text-md text-gray-400">
+        Fecha de publicación: 28/12/2023
+      </footer>
+    </div>
+
+    <div
+      class="col-span-1 border flex flex-col justify-center items-center bg-white rounded-md p-2 hover:scale-105 transition gap-2"
+    >
+      <div class="overflow-y-hidden h-36 rounded-md">
+        <img
+          src="../../public/previewPokemon.webp"
+          alt="previewpokemon"
+          loading="lazy"
+        />
+      </div>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-2xl font-semibold self-start flex flex-row justify-center items-center"
+      >
+        <Nolink />
+         PokeCard
+      </a>
+      <span class="self-start text-gray-500 font-normal text-md"
+        >Aplicación web para editar imagenes con estilo personalizado de carta pokemon e incluyendo nombre y texto.</span
+      >
+      <div
+        class="flex flex-row justify-center items-center gap-4 flex-wrap flex-shrink"
+      >
+        <Badges class="bg-red-600">
+          <Angular />
+           Angular
+        </Badges>
+        <Badges class="bg-yellow-500">
+          <Javascript />
+           JavaScript
+        </Badges>
+        <Badges class="bg-blue-950">
+          <Tailwind />
+           Tailwind
+        </Badges>
+      </div>
+      <footer class="text-md text-gray-400">
+        Fecha de publicación: En proceso...
+      </footer>
+    </div>
+  </div>
+</div>
