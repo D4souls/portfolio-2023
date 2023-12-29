@@ -1,0 +1,32 @@
+---
+import User from "./img/user.astro";
+import { Image } from "astro:assets";
+import miImagen from "../images/me.webp";
+---
+
+<div
+  class="flex flex-col lg:w-[733px] w-auto m-8 text-black justify-center items-center"
+>
+  <h3
+    class="text-black font-semibold text-3xl self-start pb-2 flex flex-row justify-center items-center gap-1"
+  >
+    <User />Sobre mí
+  </h3>
+  <div
+    class="flex flex-col md:flex-row bg-white/90 rounded-lg justify-center items-center p-4 gap-2 hover:scale-105 transition shadow-lg cursor-pointer"
+  >
+    <div class="flex flex-col justify-center items-center gap-2 order-2 md:order-1">
+      <p class="lg:text-xl text-lg">
+        Creativo, dedicado y apasionado por el Desarrollo Web, <span class="text-black/50">busco constantemente</span>
+        aprender y enfrentar nuevos desafíos. <span class="text-black/50">Además de mi amor por la
+        programación,</span> disfruto de viajar, hacer ejercicio y disfrutar con la familia.
+      </p>
+    </div>
+    <Image
+      src={miImagen}
+      alt={"Mi imagen"}
+      class={"rounded-full ring-2 ring-[#00ADB5] p-1 md:h-40 md:w-40 h-28 w-28 md:order-2 order-1"}
+      loading={"lazy"}
+    />
+  </div>
+</div>

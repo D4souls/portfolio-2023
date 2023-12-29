@@ -18,9 +18,25 @@ const { title, description } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="author" content="Sergio Ávila Macho" />
+    <link rel="canonical" href="https://sam-portfolio2023.netlify.app">
     <meta name="keywords" content="Portfolio, desarrollador, ejemplo portfolio, astro, tailwind, contratar desarrolladores, contratar programadores" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="title" content={title}>
     <title>{title}</title>
+
+    <!-- Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sam-portfolio2023.netlify.app">
+    <meta property="og:title" content={title}>
+    <meta property="og:description" content={description}>
+    <meta property="og:image" content="https://raw.githubusercontent.com/D4souls/portfolio-2023/main/public/313shots_so.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://sam-portfolio2023.netlify.app">
+    <meta property="twitter:title" content={title}>
+    <meta property="twitter:description" content={description}>
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/D4souls/portfolio-2023/main/public/489shots_so.png">
   </head>
   <body>
     <Navbar />
@@ -35,7 +51,7 @@ const { title, description } = Astro.props;
   html {
     font-family: 'Onest Variable',system-ui, sans-serif;
     scroll-behavior: smooth;
-    background: #eeeeee;
+    background: #f0ecec;
     overflow-x: hidden;
   }
   body {
@@ -47,16 +63,15 @@ const { title, description } = Astro.props;
   #wellcomeText {
       background: linear-gradient(
         318deg,
-        #ff0062,
-        #ffff00,
-        #00ff00,
-        #00ffff,
-        #0000ff
+        #017980,
+        #00f2ff,
+        #05ada5,
+        #00ADB5
       );
-      background-size: 200% 200%;
+      background-size: 400% 400%;
       -webkit-background-clip: text;
       color: transparent;
-      animation: Coolgradient 41s linear infinite;
+      animation: Coolgradient 25s linear infinite;
       display: inline-block;
     }
 

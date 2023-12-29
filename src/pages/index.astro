@@ -5,6 +5,8 @@ import Mail from "../components/img/Mail.astro";
 import Experiencia from "../components/Experiencia.astro";
 import Sections from "../components/Sections.astro";
 import Proyectos from "../components/Proyectos.astro";
+import Sobremi from "../components/Sobremi.astro";
+import Tecnologias from "../components/Tecnologias.astro";
 ---
 
 <Layout
@@ -12,19 +14,19 @@ import Proyectos from "../components/Proyectos.astro";
   description="¡Bienvenido a mi mudo digital! Soy Sergio o también llamado Sam, un desarrollador web autodidacta, creativo y con espíritu de liderazgo. Mi portfiolio es mi escaparate de creatividad donde encontrarás mis proyectos e información sobre mi."
 >
   <main>
-  <Sections class="md:mt-28 mt-14" id="inicio">
+  <Sections class="md:mt-28 md:mx-4 mt-14" id="inicio">
 	<div class="flex flex-col gap-6 lg:w-[733px] mx-10">
-		<h1 class="lg:text-8xl text-5xl font-semibold text-black/90 py-4" id="wellcomeText">Hola! <br />Soy Sergio</h1>
-		<h2 class="lg:text-2xl text-lg text-black/90">
-		  Apasionado aprendiz autodidacta de España, <span class="text-black/50">creativo, proactivo y con
+		<h1 class="lg:text-8xl md:text-6xl text-5xl font-semibold text-black/90 py-4" id="wellcomeText">Hola! <br />Soy Sergio</h1>
+		<h2 class="lg:text-2xl md:text-xl text-lg text-black/50">
+		  Apasionado aprendiz autodidacta de España, <span class="text-black/90">creativo, proactivo y con
 		  espíritu de liderazgo.</span>
 		</h2>
-		<div class="flex flex-row items-center gap-4">
+		<div class="flex flex-row items-center justify-center gap-4 ">
 		  <a
 			href="https://github.com/D4souls"
 			target="_blank"
 			rel="noopener noreferrer"
-			class="text-white/90 md:text-lg text-sm font-semibold flex flex-row justify-center gap-1 bg-[#00ADB5] rounded-full px-2 hover:scale-105 hover:text-white transition"
+			class="text-white/90 md:text-lg text-sm font-semibold shadow-lg flex flex-row justify-center gap-1 bg-[#00ADB5] rounded-full px-2 hover:scale-105 hover:text-white transition"
 		  >
 			<Github />
 			 GitHub
@@ -33,7 +35,7 @@ import Proyectos from "../components/Proyectos.astro";
 			href="mailto:sergioavilamacho12@gmail.com"
 			target="_blank"
 			rel="noopener noreferrer"
-			class="text-white/90 md:text-lg text-sm font-semibold flex flex-row justify-center gap-1 bg-[#00ADB5] rounded-full px-2 hover:scale-105 hover:text-white transition"
+			class="text-white/90 md:text-lg text-sm font-semibold shadow-lg flex flex-row justify-center gap-1 bg-[#00ADB5] rounded-full px-2 hover:scale-105 hover:text-white transition"
 		  >
 			<Mail />
 			 sergioavilamacho12@gmail.com
@@ -42,11 +44,19 @@ import Proyectos from "../components/Proyectos.astro";
 	</div>
   </Sections>
 
-  <Sections id="experiencia">
+  <Sections id="sobremi" class="md:mx-4">
+	<Sobremi/>
+  </Sections>
+
+  <Sections id="estudios" class="md:mx-4">
 	<Experiencia/>
   </Sections>
 
-  <Sections id="proyectos">
+  <Sections id="tecnologias" class="md:mx-4">
+	<Tecnologias/>
+  </Sections>
+
+  <Sections id="proyectos" class="md:mx-4">
 	<Proyectos/>
   </Sections>
 

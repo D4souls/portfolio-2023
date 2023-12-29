@@ -1,0 +1,88 @@
+---
+import Badges from "./Badges.astro";
+import Technology from "./img/Technology.astro";
+import Mysql from "./img/Mysql.astro";
+import Php from "./img/Php.astro";
+import Html from "./img/Html.astro";
+import Css from "./img/Css.astro";
+import Link from "./img/Link.astro";
+import AstroIcon from "./img/AstroIcon.astro";
+import Tailwind from "./img/Tailwind.astro";
+import Angular from "./img/Angular.astro";
+import Javascript from "./img/Javascript.astro";
+import Nolink from "./img/Nolink.astro";
+import Code from "./img/Code.astro";
+import Node from "./img/Node.astro";
+---
+
+<div
+  class="flex flex-col lg:w-[733px] w-auto m-8 text-black justify-center items-center gap-2"
+>
+  <h3
+    class="text-black font-semibold text-3xl self-start pb-2 flex flex-row justify-center items-center gap-1"
+  >
+    <Technology />
+     Tecnologías
+  </h3>
+  <!-- <p class="text-md md:text-xl self-start">Estas son las tecnologías que he usado para realizar todos los proyectos.</p> -->
+  <div class="flex flex-col justify-center w-full items-center bg-white/90 rounded-md">
+    <h4 class="md:text-2xl text-lg self-start mx-2 font-semibold">Desarrollo Front-end</h4>
+    <hr class="w-full border-gray-300" />
+    <div
+      class="flex flex-row flex-wrap p-4 justify-center items-center gap-2"
+    >
+      <Badges class="bg-orange-500">
+        <Html />
+         HTML
+      </Badges>
+
+      <Badges class="bg-sky-500">
+        <Css />
+         CSS
+      </Badges>
+
+      <Badges class="bg-yellow-500">
+        <Javascript />
+         JavaScript
+      </Badges>
+
+      <Badges class="bg-blue-950">
+        <Tailwind />
+         Tailwind
+      </Badges>
+
+      <Badges class="bg-black">
+        <AstroIcon />
+         Astro
+      </Badges>
+
+      <Badges class="bg-red-600">
+        <Angular />
+         Angular
+      </Badges>
+    </div>
+  </div>
+
+  <div class="flex flex-col justify-center w-full items-center bg-white/90 rounded-md">
+    <h4 class="md:text-2xl text-lg self-start mx-2 font-semibold">Desarrollo Back-end</h4>
+    <hr class="w-full border-gray-300" />
+    <div
+      class="flex flex-row flex-wrap  p-4 justify-center items-center gap-2 rounded-md"
+    >
+      <Badges class="bg-gray-400">
+        <Mysql />
+         MYSQL
+      </Badges>
+
+      <Badges class="bg-lime-500">
+        <Node />
+         Node
+      </Badges>
+
+      <Badges class="bg-blue-700">
+        <Php />
+         Php
+      </Badges>
+    </div>
+  </div>
+</div>

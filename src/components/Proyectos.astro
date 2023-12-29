@@ -11,20 +11,32 @@ import Angular from "./img/Angular.astro";
 import Javascript from "./img/Javascript.astro";
 import Nolink from "./img/Nolink.astro";
 import Code from "./img/Code.astro";
+
+import { Image } from "astro:assets";
+import { lazy } from "astro/zod";
+
+import imageCuandoLibro from "../images/previewCuandoLibro.webp";
+import imagePortfolio from "../images/previewportfolio.webp";
+import imagePokemon from "../images/previewPokemon.webp";
 ---
 
-<div class="flex flex-col lg:w-[733px] w-auto m-8 text-black justify-center items-center">
-  <h3 class="text-black font-semibold text-3xl self-start pb-2 flex flex-row justify-center items-center gap-1"><Code/>Proyectos</h3>
+<div
+  class="flex flex-col lg:w-[733px] w-auto m-8 text-black justify-center items-center"
+>
+  <h3
+    class="text-black font-semibold text-3xl self-start pb-2 flex flex-row justify-center items-center gap-1"
+  >
+    <Code />Proyectos
+  </h3>
   <div class="grid lg:grid-cols-2 gap-2 drop-shadow-xl grid-cols-1">
     <div
-      class="lg:col-span-2 border flex flex-col justify-center items-center bg-white rounded-md p-2 hover:scale-105 transition gap-2"
+      class="lg:col-span-2 border flex flex-col justify-center items-center bg-white/90 rounded-md p-2 hover:scale-105 transition gap-2"
     >
       <div class="overflow-y-hidden h-32 rounded-md">
-        <img
-          src="previewCuandoLibro.webp"
+        <Image
+          src={imageCuandoLibro}
           alt="ejemploCuandoLibro"
-          class="bg-top"
-          loading="lazy"
+          loading={"lazy"}
         />
       </div>
       <a
@@ -36,14 +48,13 @@ import Code from "./img/Code.astro";
         <Link />
          CuandoLibro
       </a>
-      <span class="self-start text-gray-500 font-normal text-md"
+      <span
+        class="self-start text-gray-500 font-normal text-md lg:text-lg md:text-md"
         >Aplicación vía web para la administración de una pequeña empresa. Con
         esta aplicación podrás desde crear un usuario hasta gestionar las
         nóminas de cada mes.</span
       >
-      <div
-        class="flex flex-row justify-center items-center gap-4 flex-wrap"
-      >
+      <div class="flex flex-row justify-center items-center gap-4 flex-wrap">
         <Badges class="bg-blue-700">
           <Php />
            Php
@@ -71,14 +82,10 @@ import Code from "./img/Code.astro";
     </div>
 
     <div
-      class="col-span-1 border flex flex-col justify-center items-center bg-white rounded-md p-2 hover:scale-105 transition gap-2"
+      class="col-span-1 border flex flex-col justify-center items-center bg-white/90 rounded-md p-2 hover:scale-105 transition gap-2"
     >
       <div class="overflow-y-hidden h-32 rounded-md">
-        <img
-          src="previewportfolio.webp"
-          alt="previewPortfolio"
-          loading="lazy"
-        />
+        <Image src={imagePortfolio} alt={"previewPortfolio"} loading={"lazy"} />
       </div>
       <a
         href="https://github.com/D4souls/portfolio-2023"
@@ -89,7 +96,8 @@ import Code from "./img/Code.astro";
         <Link />
          Portfolio
       </a>
-      <span class="self-start text-gray-500 font-normal text-md"
+      <span
+        class="self-start text-gray-500 font-normal text-md lg:text-lg md:text-md"
         >Desarrollo de portfolio personal donde se muestra información sobre mi,
         estudios y proyectos.</span
       >
@@ -119,25 +127,19 @@ import Code from "./img/Code.astro";
     </div>
 
     <div
-      class="col-span-1 border flex flex-col justify-center items-center bg-white rounded-md p-2 hover:scale-105 transition gap-2"
+      class="col-span-1 border flex flex-col justify-center items-center bg-white/90 rounded-md p-2 hover:scale-105 transition gap-2"
     >
       <div class="overflow-y-hidden h-36 rounded-md">
-        <img
-          src="previewPokemon.webp"
-          alt="previewpokemon"
-          loading="lazy"
-        />
+        <Image src={imagePokemon} alt="ejemploPokemon" loading={"lazy"} />
       </div>
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        class="text-2xl font-semibold self-start flex flex-row justify-center items-center"
-      >
+      <span>
         <Nolink />
          PokeCard
-      </a>
-      <span class="self-start text-gray-500 font-normal text-md"
-        >Aplicación web para editar imagenes con estilo personalizado de carta pokemon e incluyendo nombre y texto.</span
+      </span>
+      <span
+        class="self-start text-gray-500 font-normal text-sm lg:text-lg md:text-md"
+        >Aplicación web para editar imagenes con estilo personalizado de carta
+        pokemon e incluyendo nombre y texto.</span
       >
       <div
         class="flex flex-row justify-center items-center gap-4 flex-wrap flex-shrink"
