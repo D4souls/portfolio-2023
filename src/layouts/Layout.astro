@@ -15,8 +15,10 @@ const { title, description } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="author" content="Sergio Ávila Macho" />
+    <meta name="keywords" content="Portfolio, desarrollador, ejemplo portfolio, astro, tailwind, contratar desarrolladores, contratar programadores" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
@@ -51,7 +53,7 @@ const { title, description } = Astro.props;
         #00ffff,
         #0000ff
       );
-      background-size: 300% 300%;
+      background-size: 200% 200%;
       -webkit-background-clip: text;
       color: transparent;
       animation: Coolgradient 41s linear infinite;
