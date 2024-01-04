@@ -1,5 +1,9 @@
+---
+const { class: className } = Astro.props
+---
+
 <svg
-  class="w-2.5 h-2.5 ms-2 rtl:rotate-180"
+  class={`w-2.5 h-2.5 ms-2 rtl:rotate-180 ${className}`}
   aria-hidden="true"
   xmlns="http://www.w3.org/2000/svg"
   fill="none"
