@@ -13,10 +13,10 @@ import miImagen from "../images/me.webp";
     <User />Sobre mí
   </h3>
   <div
-    class="flex flex-col md:flex-row bg-white/90 rounded-lg justify-center items-center p-4 gap-2 hover:scale-105 transition shadow-lg cursor-pointer"
+    class="flex flex-col md:flex-row bg-white/90 rounded-lg justify-center items-center shadow-lg"
   >
-    <div class="flex flex-col justify-center items-center gap-2 order-2 md:order-1">
-      <p class="lg:text-xl text-lg">
+    <div class="flex flex-col justify-center items-center pl-4 order-2 md:order-1">
+      <p class="lg:text-xl text-lg text-pretty">
         Creativo, dedicado y apasionado por el Desarrollo Web, <span class="text-black/50">busco constantemente</span>
         aprender y enfrentar nuevos desafíos. <span class="text-black/50">Además de mi pasión por la
         programación,</span> disfruto de viajar, hacer ejercicio y disfrutar con la familia.
@@ -25,8 +25,9 @@ import miImagen from "../images/me.webp";
     <Image
       src={miImagen}
       alt={"Mi imagen"}
-      class={"rounded-full ring-2 ring-[#00ADB5] p-1 md:h-40 md:w-40 h-28 w-28 md:order-2 order-1"}
-      loading={"lazy"}
+      id={"miImagen"}
+      loading="lazy"
     />
+
   </div>
 </div>

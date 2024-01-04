@@ -1,7 +1,7 @@
 ---
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
-import '@fontsource-variable/onest';
+import "@fontsource-variable/onest";
 interface Props {
   title: string;
   description: string;
@@ -18,25 +18,37 @@ const { title, description } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="author" content="Sergio Ávila Macho" />
-    <link rel="canonical" href="https://sam-portfolio2023.netlify.app">
-    <meta name="keywords" content="Portfolio, desarrollador, ejemplo portfolio, astro, tailwind, contratar desarrolladores, contratar programadores" />
+    <link rel="canonical" href="https://sam-portfolio2023.netlify.app" />
+    <meta
+      name="keywords"
+      content="Portfolio, desarrollador, ejemplo portfolio, astro, tailwind, contratar desarrolladores, contratar programadores"
+    />
     <meta name="generator" content={Astro.generator} />
-    <meta name="title" content={title}>
+    <meta name="title" content={title} />
     <title>{title}</title>
 
     <!-- Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sam-portfolio2023.netlify.app">
-    <meta property="og:title" content={title}>
-    <meta property="og:description" content={description}>
-    <meta property="og:image" content="https://raw.githubusercontent.com/D4souls/portfolio-2023/main/public/313shots_so.png">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sam-portfolio2023.netlify.app" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/D4souls/portfolio-2023/main/public/313shots_so.png"
+    />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://sam-portfolio2023.netlify.app">
-    <meta property="twitter:title" content={title}>
-    <meta property="twitter:description" content={description}>
-    <meta property="twitter:image" content="https://raw.githubusercontent.com/D4souls/portfolio-2023/main/public/489shots_so.png">
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://sam-portfolio2023.netlify.app"
+    />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta
+      property="twitter:image"
+      content="https://raw.githubusercontent.com/D4souls/portfolio-2023/main/public/489shots_so.png"
+    />
   </head>
   <body>
     <Navbar />
@@ -49,7 +61,7 @@ const { title, description } = Astro.props;
     color-scheme: light dark;
   }
   html {
-    font-family: 'Onest Variable',system-ui, sans-serif;
+    font-family: "Onest Variable", system-ui, sans-serif;
     scroll-behavior: smooth;
     background: #f0ecec;
     overflow-x: hidden;
@@ -61,39 +73,54 @@ const { title, description } = Astro.props;
   }
 
   #wellcomeText {
-      background: linear-gradient(
-        318deg,
-        #017980,
-        #00f2ff,
-        #05ada5,
-        #00ADB5
-      );
-      background-size: 400% 400%;
-      -webkit-background-clip: text;
-      color: transparent;
-      animation: Coolgradient 25s linear infinite;
-      display: inline-block;
-    }
+    background: linear-gradient(318deg, #017980, #00f2ff, #05ada5, #00adb5);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: Coolgradient 25s linear infinite;
+    display: inline-block;
+  }
 
-    @keyframes Coolgradient {
-      0% {
-        background-position: 5% 0%;
-      }
-      50% {
-        background-position: 96% 100%;
-      }
-      100% {
-        background-position: 5% 0%;
-      }
+  @keyframes Coolgradient {
+    0% {
+      background-position: 5% 0%;
     }
+    50% {
+      background-position: 96% 100%;
+    }
+    100% {
+      background-position: 5% 0%;
+    }
+  }
 
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;
     }
 
-	#wellcomeText {
-		color: black;
-	}
+    #wellcomeText {
+      color: black;
+    }
+  }
+
+  @media screen and (min-width: 766px) {
+    #miImagen {
+      clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+      width: 11rem;
+      height: 11rem;
+      order: 1;
+      border-top-right-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
+    }
+
+  }
+  @media screen and (max-width: 765px) {
+    #miImagen {
+      width: 9rem;
+      height: 9rem;
+      border-radius: 100%;
+      border: 2px solid #00adb5;
+      padding: 0.2rem;
+    }
   }
 </style>

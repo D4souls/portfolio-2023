@@ -1,5 +1,4 @@
 ---
-import Badges from "./Badges.astro";
 import Mysql from "./img/Mysql.astro";
 import Php from "./img/Php.astro";
 import Html from "./img/Html.astro";
@@ -9,11 +8,10 @@ import AstroIcon from "./img/AstroIcon.astro";
 import Tailwind from "./img/Tailwind.astro";
 import Angular from "./img/Angular.astro";
 import Javascript from "./img/Javascript.astro";
-import Nolink from "./img/Nolink.astro";
 import Code from "./img/Code.astro";
+import Derecha from "./img/Derecha.astro";
 
 import { Image } from "astro:assets";
-import { lazy } from "astro/zod";
 
 import imageCuandoLibro from "../images/previewCuandoLibro.webp";
 import imagePortfolio from "../images/previewportfolio.webp";
@@ -24,142 +22,190 @@ import imagePokemon from "../images/previewPokemon.webp";
   class="flex flex-col lg:w-[733px] w-auto m-8 text-black justify-center items-center"
 >
   <h3
-    class="text-black font-semibold text-3xl self-start pb-2 flex flex-row justify-center items-center gap-1"
+    class="text-black font-semibold text-3xl pb-2 flex flex-row justify-center items-center gap-1 self-start"
   >
     <Code />Proyectos
   </h3>
-  <div class="grid lg:grid-cols-2 gap-2 drop-shadow-xl grid-cols-1">
-    <div
-      class="lg:col-span-2 border flex flex-col justify-center items-center bg-white/90 rounded-md p-2 hover:scale-105 transition gap-2"
+
+  <!-- CuandoLibro -->
+
+  <div
+    class="grid lg:grid-cols-3 gap-4 drop-shadow-xl grid-cols-1 content-center"
+  >
+    <article
+      class="lg:col-span-3 border flex flex-col justify-center items-center bg-white/90 rounded-md gap-2"
     >
-      <div class="overflow-y-hidden h-32 rounded-md">
+      <div class="overflow-y-hidden max-h-32 rounded-t-md">
         <Image
           src={imageCuandoLibro}
           alt="ejemploCuandoLibro"
           loading={"lazy"}
         />
       </div>
-      <a
-        href="https://github.com/D4souls/cuandoLibro"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="text-2xl font-semibold self-start flex flex-row justify-center items-center"
-      >
-        <Link />
-         CuandoLibro
-      </a>
-      <span
-        class="self-start text-gray-500 font-normal text-md lg:text-lg md:text-md"
-        >Aplicación vía web para la administración de una pequeña empresa. Con
-        esta aplicación podrás desde crear un usuario hasta gestionar las
-        nóminas de cada mes.</span
-      >
-      <div class="flex flex-row justify-center items-center gap-4 flex-wrap">
-        <Badges class="bg-blue-700">
-          <Php />
-           Php
-        </Badges>
-        <Badges class="bg-yellow-500">
-          <Javascript />
-           JavaScript
-        </Badges>
-        <Badges class="bg-orange-500">
-          <Html />
-           HTML
-        </Badges>
-        <Badges class="bg-sky-500">
-          <Css />
-           CSS
-        </Badges>
-        <Badges class="bg-gray-400">
-          <Mysql />
-           MYSQL
-        </Badges>
+      <div class="flex flex-col justify-center items-start px-4">
+        <div class="flex md:flex-row flex-col gap-2 items-center">
+          <a
+            href="https://github.com/D4souls/cuandoLibro"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-3xl font-semibold flex flex-row justify-center items-center hover:underline"
+          >
+            <Link />
+             CuandoLibro
+          </a>
+          <div class="flex flex-row gap-2">
+            <Php />
+            <Javascript />
+            <Html />
+            <Css />
+            <Mysql />
+          </div>
+        </div>
+        <hr class="w-full border-gray-200 my-1" />
+        <div class="flex flex-col flex-grow gap-4 pb-4">
+          <p class="text-gray-500 font-normal text-md lg:text-xl line-clamp-3">
+            Aplicación vía web para la administración de una pequeña empresa.
+            Con esta aplicación podrás desde crear un usuario hasta gestionar
+            las nóminas de cada mes, esta aplicación ofrece las herramientas
+            necesarias para simplificar y agilizar los procesos de
+            administración de la empresa.
+          </p>
+          <a
+            href="https://github.com/D4souls/cuandoLibro/blob/main/README.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-lg text-white/90
+            flex flex-row justify-center items-center
+            bg-[#00ADB5] w-28 rounded-full px-2 py-1
+            hover:scale-105 transition ease-in-out font-medium
+            hover:bg-[#00ADB5]/80 hover:text-white"
+          >
+            Ver más
+            <Derecha />
+          </a>
+          <footer class="mt-auto">
+            <time
+              datetime="2023-12-10"
+              class="px-2 rounded-md bg-gray-300/45 text-gray-600/90"
+              >10/12/2023</time
+            >
+          </footer>
+        </div>
       </div>
-      <footer class="text-md text-gray-400">
-        Fecha de publicación: 10/12/2023
-      </footer>
-    </div>
+    </article>
 
-    <div
-      class="col-span-1 border flex flex-col justify-center items-center bg-white/90 rounded-md p-2 hover:scale-105 transition gap-2"
+    <!-- Portfolio -->
+
+    <article
+      class="lg:col-span-2 border flex flex-col items-center bg-white/90 rounded-md gap-2"
     >
-      <div class="overflow-y-hidden h-32 rounded-md">
+      <div class="overflow-y-hidden max-h-32 rounded-t-md">
         <Image src={imagePortfolio} alt={"previewPortfolio"} loading={"lazy"} />
       </div>
-      <a
-        href="https://github.com/D4souls/portfolio-2023"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="text-2xl font-semibold self-start flex flex-row justify-center items-center"
-      >
-        <Link />
-         Portfolio
-      </a>
-      <span
-        class="self-start text-gray-500 font-normal text-md lg:text-lg md:text-md"
-        >Desarrollo de portfolio personal donde se muestra información sobre mi,
-        estudios y proyectos.</span
-      >
-      <div
-        class="flex flex-row justify-center items-center gap-4 flex-wrap flex-shrink"
-      >
-        <Badges class="bg-black">
+      <div class="flex flex-col flex-grow justify-center items-start px-4">
+        <div class="flex flex-row gap-2 justify-center items-center">
+          <a
+            href="https://github.com/D4souls/portfolio-2023"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-3xl font-semibold flex flex-row justify-center items-center hover:underline"
+          >
+            <Link />
+             Portfolio
+          </a>
           <AstroIcon />
-           Astro
-        </Badges>
-        <Badges class="bg-orange-500">
           <Html />
-           HTML
-        </Badges>
-        <Badges class="bg-sky-500">
           <Css />
-           CSS
-        </Badges>
-        <Badges class="bg-blue-950">
           <Tailwind />
-           Tailwind
-        </Badges>
-      </div>
-      <footer class="text-md text-gray-400">
-        Fecha de publicación: 28/12/2023
-      </footer>
-    </div>
+        </div>
+        <hr class="w-full border-gray-200 my-1" />
+        <div class="flex flex-col flex-grow gap-4">
+          <p
+            class="text-gray-500 font-normal text-md lg:text-xl md:text-md line-clamp-3"
+          >
+            Desarrollo de página web personal en la cual se muestra información
+            sobre mi, mis estudios realizados y todos los proyectos que he
+            realizado.
+          </p>
 
-    <div
-      class="col-span-1 border flex flex-col justify-center items-center bg-white/90 rounded-md p-2 hover:scale-105 transition gap-2"
+          <a
+            href="https://github.com/D4souls/portfolio-2023/blob/main/README.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-lg text-white/90
+            flex flex-row justify-center items-center
+            bg-[#00ADB5] w-28 rounded-full px-2 py-1
+            hover:scale-105 transition ease-in-out font-medium
+            hover:bg-[#00ADB5]/80 hover:text-white"
+          >
+            Ver más
+            <Derecha />
+          </a>
+
+          <footer class="text-md text-gray-400 mt-auto pb-2">
+            <time
+              datetime="2023-12-28"
+              class="px-2 rounded-md bg-gray-300/45 text-gray-600/90"
+              >28/12/2023</time
+            >
+          </footer>
+        </div>
+      </div>
+    </article>
+
+    <!-- PokeCard -->
+
+    <article
+      class="lg:col-span-1 border flex flex-col items-center bg-white/90 rounded-md gap-2"
     >
-      <div class="overflow-y-hidden h-36 rounded-md">
-        <Image src={imagePokemon} alt="ejemploPokemon" loading={"lazy"} />
+      <div class="overflow-y-hidden max-h-32 rounded-t-md">
+        <Image src={imagePokemon} alt="ejemploPokemon" loading="lazy" />
       </div>
-      <span class="text-2xl font-semibold self-start flex flex-row justify-center items-center">
-        <Nolink />
-         PokeCard
-      </span>
-      <span
-        class="self-start text-gray-500 font-normal text-sm lg:text-lg md:text-md"
-        >Aplicación web para editar imagenes con estilo personalizado de carta
-        pokemon e incluyendo nombre y texto.</span
-      >
-      <div
-        class="flex flex-row justify-center items-center gap-4 flex-wrap flex-shrink"
-      >
-        <Badges class="bg-red-600">
+      <div class="flex flex-col flex-grow justify-center items-start px-4">
+        <div class="flex flex-row gap-2 justify-center items-center">
+          <a
+            href="https://github.com/D4souls/pokecard"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-2xl font-semibold flex flex-row justify-center items-center hover:underline"
+          >
+            <Link />
+             PokeCard
+          </a>
           <Angular />
-           Angular
-        </Badges>
-        <Badges class="bg-yellow-500">
-          <Javascript />
-           JavaScript
-        </Badges>
-        <Badges class="bg-blue-950">
-          <Tailwind />
-           Tailwind
-        </Badges>
+          <!-- <Javascript />
+          <Tailwind /> -->
+        </div>
+        <hr class="w-full border-gray-200 my-1" />
+        <div class="flex flex-col flex-grow gap-4">
+          <p
+            class="text-gray-500 font-normal text-md lg:text-xl md:text-md line-clamp-3"
+          >
+            Aplicación web para editar imágenes con estilo personalizado de
+            carta Pokémon. Puedes elegir entre todas las variedades que hay,
+            personalizar el nombre, la descripción de la carta y darle un efecto
+            3D. ¡Comparte tus creaciones con los amigos!
+          </p>
+          <a
+            href="https://github.com/D4souls/pokecard/blob/main/README.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-lg text-white/90
+            flex flex-row justify-center items-center
+            bg-[#00ADB5] w-28 rounded-full px-2 py-1
+            hover:scale-105 transition ease-in-out font-medium
+            hover:bg-[#00ADB5]/80 hover:text-white"
+          >
+            Ver más
+            <Derecha />
+          </a>
+          <footer class="text-md text-gray-400 mt-auto pb-2">
+            <span class="px-2 rounded-md bg-gray-300/45 text-gray-600/90"
+              >Próximamente</span
+            >
+          </footer>
+        </div>
       </div>
-      <footer class="text-md text-gray-400">
-        Fecha de publicación: En proceso...
-      </footer>
-    </div>
+    </article>
   </div>
 </div>
