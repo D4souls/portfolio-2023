@@ -1,7 +1,5 @@
 ---
 import User from "./img/user.astro";
-import { Image } from "astro:assets";
-import miImagen from "../images/me.webp";
 ---
 
 <div
@@ -22,10 +20,10 @@ import miImagen from "../images/me.webp";
         programación,</span> disfruto de viajar, hacer ejercicio y disfrutar con la familia.
       </p>
     </div>
-    <Image
-      src={miImagen}
-      alt={"Mi imagen"}
-      id={"miImagen"}
+    <img
+      src="me.webp"
+      alt="Mi imagen"
+      id="miImagen"
       loading="lazy"
     />
 
