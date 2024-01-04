@@ -1,33 +1,46 @@
 ---
 import Github from "../components/img/Github.astro";
 import Mail from "../components/img/Mail.astro";
-import Derecha from "./img/Derecha.astro";
+import Abajo from "./img/Abajo.astro";
 ---
 
-<div class="flex flex-col justify-center gap-6 lg:w-[733px] mx-10 relative">
-    <h1 class="lg:text-8xl md:text-6xl text-5xl font-semibold text-black/90 py-4" id="wellcomeText">Hola! <br/> Soy Sergio</h1>
-    <h2 class="lg:text-2xl md:text-xl text-lg text-black/90">
-      Apasionado aprendiz autodidacta de España, <span class="text-main">creativo, proactivo y con
-      espíritu de liderazgo.</span>
-    </h2>
-    <div class="flex flex-row items-center justify-center gap-4 ">
-      <a
-        href="https://github.com/D4souls"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="text-white/90 md:text-lg text-sm font-semibold shadow-lg flex flex-row justify-center gap-1 bg-[#00ADB5] rounded-lg p-1 hover:scale-105 hover:text-white transition"
-      >
-        <Github />
-         GitHub
-      </a>
-      <a
-        href="mailto:sergioavilamacho12@gmail.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="text-white/90 md:text-lg text-sm font-semibold shadow-lg flex flex-row justify-center gap-1 bg-[#00ADB5] rounded-lg p-1 hover:scale-105 hover:text-white transition"
-      >
-        <Mail />
-         sergioavilamacho12@gmail.com
-      </a>
-    </div>
+<div class="flex flex-col justify-center">
+  <img src="me.webp" alt="Mi foto" class="w-32 h-32 rounded-full ring-2 ring-main p-1"/>
+  <h1
+    class="lg:text-8xl md:text-6xl text-5xl font-semibold text-black/90 py-4"
+    id="wellcomeText"
+  >
+    Hola! Soy Sergio
+  </h1>
+  <h2 class="lg:text-2xl md:text-xl text-lg text-black/90">
+    Apasionado desarrollador web con espíritu <span class="text-main"
+      >creativo, proactivo y liderazgo.</span
+    >
+    <p></p>
+  </h2>
+  <div class="flex flex-row items-center justify-center gap-4 mt-4">
+    <a
+      href="https://github.com/D4souls"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="text-white/90 md:text-lg text-sm font-semibold shadow-lg flex flex-row justify-center gap-1 bg-main rounded-lg p-1 hover:scale-105 hover:text-white transition"
+    >
+      <Github />
+      GitHub
+    </a>
+    <a
+      href="mailto:sergioavilamacho12@gmail.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="text-white/90 md:text-lg text-sm font-semibold shadow-lg flex flex-row justify-center gap-1 bg-main rounded-lg p-1 hover:scale-105 hover:text-white transition"
+    >
+      <Mail />
+      sergioavilamacho12@gmail.com
+    </a>
+  </div>
+  <div class="flex flex-col justify-center items-center mt-48 hover:scale-110 transition-all delay-200 w-10 self-center">
+    <a href="#sobremi" class="bg-black/85 p-1 rounded-lg">
+      <Abajo/>
+    </a>
+  </div>
 </div>
