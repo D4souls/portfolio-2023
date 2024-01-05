@@ -4,10 +4,10 @@ import Mail from "../components/img/Mail.astro";
 import Abajo from "./img/Abajo.astro";
 ---
 
-<div class="flex flex-col justify-center">
-  <img src="logoPortfolio2023.webp" alt="Mi foto" class="w-32 h-32 rounded-full ring-2 ring-main p-1"/>
+<div class="flex flex-col justify-center items-start mx-10">
+  <img src="logoPortfolio2023.webp" alt="Mi foto" class="md:w-32 md:h-32 w-20 h-20 rounded-full ring-2 ring-main p-1"/>
   <h1
-    class="lg:text-8xl md:text-6xl text-5xl font-semibold text-black/90 py-4"
+    class="lg:text-8xl md:text-6xl text-4xl font-semibold text-black/90 py-4"
     id="wellcomeText"
   >
     Hola! Soy Sergio
@@ -16,7 +16,6 @@ import Abajo from "./img/Abajo.astro";
     Apasionado desarrollador web con espíritu <span class="text-main"
       >creativo, proactivo y liderazgo.</span
     >
-    <p></p>
   </h2>
   <div class="flex flex-row items-center justify-center gap-4 mt-4">
     <a
@@ -38,9 +37,31 @@ import Abajo from "./img/Abajo.astro";
       sergioavilamacho12@gmail.com
     </a>
   </div>
-  <div class="flex flex-col justify-center items-center mt-48 hover:scale-110 transition-all delay-200 w-10 self-center">
+  <div class="flex flex-col justify-center items-center lg:mt-48 md:mt-24 mt-16 hover:scale-110 transition-all delay-200 w-10 self-center" id="flecha">
     <a href="#sobremi" class="bg-black/85 p-1 rounded-lg">
       <Abajo/>
     </a>
   </div>
 </div>
+
+
+<style>
+
+@media (prefers-reduced-motion: no-preference) {
+  #flecha {
+    animation: levitacion 8s infinite;
+  }
+  
+  @keyframes levitacion {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px); /* Puedes ajustar la distancia de la flotación aquí */
+    }
+  }
+
+}
+
+
+</style>

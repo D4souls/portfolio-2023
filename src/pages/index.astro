@@ -10,26 +10,22 @@ import Bienvenida from "../components/Bienvenida.astro";
 
 <Layout
   title="Portfolio Sergio Avila Macho. Desarrollador web autodidacta, creativo y con espíritu de liderazgo."
-  description="¡Bienvenido a mi mudo digital! Soy Sergio o también llamado Sam, un desarrollador web autodidacta, creativo y con espíritu de liderazgo. Mi portfiolio es mi escaparate de creatividad donde encontrarás mis proyectos e información sobre mi."
+  description="¡Bienvenido a mi mundo digital! Soy Sergio o también llamado Sam, un desarrollador web autodidacta, creativo y con espíritu de liderazgo. Mi portfiolio es mi escaparate de creatividad donde encontrarás mis proyectos e información sobre mi."
 >
   <main>
     <Sections class="h-screen" id="inicio">
       <Bienvenida />
     </Sections>
 
-    <Sections id="sobremi" class="w-screen bg-white p-10">
+    <Sections id="sobremi" class="bg-white p-10 drop-shadow-md">
       <Sobremi />
     </Sections>
 
-    <Sections id="estudios" class="w-screen p-10">
+    <Sections id="estudios" class="p-10">
       <Experiencia />
     </Sections>
 
-    <Sections id="tecnologias" class="w-screen">
-      <Tecnologias />
-    </Sections>
-
-    <Sections id="proyectos" class="w-screen">
+    <Sections id="proyectos" class="p-10">
       <Proyectos />
     </Sections>
   </main>

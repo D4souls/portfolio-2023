@@ -11,7 +11,7 @@ const { title, description } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es" style="background-image: url(background-stars.webp);">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
@@ -50,7 +50,7 @@ const { title, description } = Astro.props;
       content="https://raw.githubusercontent.com/D4souls/portfolio-2023/main/public/489shots_so.png"
     />
   </head>
-  <body class="bg-[#f0ecec]">
+  <body>
     <Navbar />
     <slot />
     <Footer />
@@ -98,28 +98,7 @@ const { title, description } = Astro.props;
     }
 
     #wellcomeText {
-      color: black;
+      color: #00ADB5;
     }
   }
-
-  /* @media screen and (min-width: 766px) {
-    #miImagen {
-      clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
-      width: 11rem;
-      height: 11rem;
-      order: 1;
-      border-top-right-radius: 0.5rem;
-      border-bottom-right-radius: 0.5rem;
-    }
-
-  }
-  @media screen and (max-width: 765px) {
-    #miImagen {
-      width: 9rem;
-      height: 9rem;
-      border-radius: 100%;
-      border: 2px solid #00adb5;
-      padding: 0.2rem;
-    }
-  } */
 </style>

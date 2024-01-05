@@ -1,13 +1,24 @@
 ---
-import User from "./img/user.astro";
+import Mysql from "./img/Mysql.astro";
+import Php from "./img/Php.astro";
+import Html from "./img/Html.astro";
+import Css from "./img/Css.astro";
+import AstroIcon from "./img/AstroIcon.astro";
+import Tailwind from "./img/Tailwind.astro";
+import Angular from "./img/Angular.astro";
+import Javascript from "./img/Javascript.astro";
+import Node from "./img/Node.astro";
+import Git from "./img/Git.astro";
 ---
 
 <div
-  class="flex flex-col text-black max-w-[800px] justify-center items-center gap-8"
+  class="flex flex-col text-black lg:max-w-[800px] justify-center items-center gap-8 mx-10 my-8"
 >
-  <h3 class="text-black font-semibold text-3xl self-start">&lt;Sobre mí /&gt;</h3>
+  <h3 class="text-black font-semibold text-3xl self-start">
+    &lt;Sobre mí /&gt;
+  </h3>
   <div
-    class="flex flex-col max-w-[800px] md:flex-row rounded-lg justify-center items-center"
+    class="flex flex-col lg:max-w-[800px] lg:flex-row rounded-lg justify-center items-center"
   >
     <div
       class="flex flex-col justify-center items-center gap-2 lg:text-xl text-lg text-pretty text-black/90"
@@ -21,25 +32,40 @@ import User from "./img/user.astro";
         >.
       </p>
       <p>
-        Además de mi pasión por la programación disfruto de viajar, asistir a eventos automovilísticos, realizar ciclismo por montaña y estar con la familia.
+        Además de mi pasión por la programación disfruto de viajar, asistir a
+        eventos automovilísticos, realizar ciclismo por montaña y estar con la
+        familia.
       </p>
     </div>
     <div
-      class="flex flex-col items-center justify-center gap-2 w-[800px] relative"
+      class="flex flex-col items-center justify-center gap-2 lg:w-[800px] relative mt-4"
     >
       <img
         src="me.webp"
         alt="Mi imagen"
         loading="lazy"
-        class="w-52 h-52 rounded-sm absolute blur-md"
+        class="lg:w-52 lg:h-52 w-36 h-36 mb-4 rounded-sm absolute blur-xl"
       />
       <img
         src="me.webp"
         alt="Mi imagen"
         loading="lazy"
-        class="w-52 h-52 rounded-lg z-10"
+        class="lg:w-52 lg:h-52 w-36 h-36 rounded-lg z-10"
       />
       <p class="italic text-sm text-black/90 z-10">"In omnia paratus"</p>
     </div>
   </div>
+  <div class="flex flex-row flex-grow gap-4 max-w-[300px] md:max-w-[400px]">
+    <Html />
+    <Css />
+    <Javascript />
+    <Php />
+    <Mysql />
+    <Tailwind />
+    <AstroIcon />
+    <Angular />
+    <Node />
+    <Git/>
+  </div>
+
 </div>
