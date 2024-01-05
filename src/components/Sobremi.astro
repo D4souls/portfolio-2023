@@ -3,29 +3,37 @@ import User from "./img/user.astro";
 ---
 
 <div
-  class="flex flex-col lg:w-[733px] w-auto m-8 text-black justify-center items-center"
+  class="flex flex-col text-black w-screen bg-white justify-center items-center p-10 gap-8"
 >
   <h3
-    class="text-black font-semibold text-3xl self-start pb-2 flex flex-row justify-center items-center gap-1"
+    class="text-black font-semibold text-3xl pb-2 flex flex-row justify-center items-center gap-1"
   >
-    <User />Sobre mí
+    &lt;Sobre mí /&gt;
   </h3>
   <div
-    class="flex flex-col md:flex-row bg-white/90 rounded-lg justify-center items-center shadow-lg"
+    class="flex flex-col max-w-[800px] md:flex-row rounded-lg justify-center items-center"
   >
-    <div class="flex flex-col justify-center items-center pl-4 order-2 md:order-1">
-      <p class="lg:text-xl text-lg text-pretty">
-        Creativo, dedicado y apasionado por el Desarrollo Web, <span class="text-black/50">busco constantemente</span>
-        aprender y enfrentar nuevos desafíos. <span class="text-black/50">Además de mi pasión por la
-        programación,</span> disfruto de viajar, hacer ejercicio y disfrutar con la familia.
+    <div
+      class="flex flex-col justify-center items-center gap-2 lg:text-xl text-lg text-pretty text-black/90"
+    >
+      <p>
+        Soy Sergio, <span class="font-medium">un desarrollador Web autodidacta, amante de la tecnología,
+          creativo y dedicado.</span>
+      </p>
+      <p>
+        Busco constantemente aprender y <span class="font-medium">enfrentar nuevos desafíos</span>. Además de mi
+        pasión por la programación, disfruto de viajar, hacer ejercicio y
+        disfrutar con la familia.
       </p>
     </div>
-    <img
-      src="me.webp"
-      alt="Mi imagen"
-      id="miImagen"
-      loading="lazy"
-    />
-
+    <div class="flex flex-col items-center justify-center gap-2 w-[800px]">
+      <img
+        src="me.webp"
+        alt="Mi imagen"
+        loading="lazy"
+        class="w-52 h-52 rounded-lg"
+      />
+      <p class="italic text-sm text-black/90">"In omnia paratus"</p>
+    </div>
   </div>
 </div>
