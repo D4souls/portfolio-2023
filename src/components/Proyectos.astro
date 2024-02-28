@@ -16,20 +16,17 @@ import Derecha from "./img/Derecha.astro";
   class="flex flex-col max-w-[800px] w-auto text-black justify-center items-center lg:mx-10 my-8"
 >
   <h3
-    class="text-black font-semibold text-3xl pb-2 flex flex-row justify-center items-center gap-1 self-start"
+    class="text-black font-semibold text-3xl pb-2 flex flex-row justify-center items-center gap-1 self-start mb-4"
   >
-    <Code />Proyectos
+    &lt;Proyectos /&gt;
   </h3>
 
   <!-- CuandoLibro -->
 
-  <div
-    class="grid gap-4 drop-shadow-xl grid-cols-1 content-center"
-  >
-    <article
-      class="lg:col-span-3 border flex flex-col justify-center items-center bg-white/90 rounded-md gap-2"
+  <article
+      class="border flex flex-col justify-center items-center bg-white/90 rounded-md gap-2"
     >
-      <div class="overflow-y-hidden max-h-32 rounded-t-md">
+      <div class="overflow-y-hidden max-h-96 rounded-t-md">
         <img
           src="previewCuandoLibro.webp"
           alt="ejemploCuandoLibro"
@@ -60,9 +57,8 @@ import Derecha from "./img/Derecha.astro";
           <p class="text-gray-500 font-normal text-md lg:text-xl line-clamp-3">
             Aplicación vía web para la administración de una pequeña empresa.
             Con esta aplicación podrás desde crear un usuario hasta gestionar
-            las nóminas de cada mes, esta aplicación ofrece las herramientas
-            necesarias para simplificar y agilizar los procesos de
-            administración de la empresa.
+            las nóminas de cada mes simplificando y agilizando los procesos de
+            administración.
           </p>
           <a
             href="https://github.com/D4souls/cuandoLibro/blob/main/README.md"
@@ -87,118 +83,4 @@ import Derecha from "./img/Derecha.astro";
         </div>
       </div>
     </article>
-
-    <!-- Portfolio -->
-
-    <!-- <article
-      class="lg:col-span-2 border flex flex-col items-center bg-white/90 rounded-md gap-2"
-    >
-      <div class="overflow-y-hidden max-h-32 rounded-t-md">
-        <img src="previewPortfolio.webp" alt="previewPortfolio" loading="lazy" />
-      </div>
-      <div class="flex flex-col flex-grow justify-center items-start px-4">
-        <div class="flex flex-row gap-2 justify-center items-center">
-          <a
-            href="https://github.com/D4souls/portfolio-2023"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-3xl font-semibold flex flex-row justify-center items-center hover:underline"
-          >
-            <Link />
-             Portfolio
-          </a>
-          <AstroIcon />
-          <Html />
-          <Css />
-          <Tailwind />
-        </div>
-        <hr class="w-full border-gray-200 my-1" />
-        <div class="flex flex-col flex-grow gap-4">
-          <p
-            class="text-gray-500 font-normal text-md lg:text-xl md:text-md line-clamp-3"
-          >
-            Desarrollo de página web personal en la cual se muestra información
-            sobre mi, mis estudios realizados y todos los proyectos que he
-            realizado.
-          </p>
-
-          <a
-            href="https://github.com/D4souls/portfolio-2023/blob/main/README.md"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-lg text-white/90
-            flex flex-row justify-center items-center
-            bg-[#00ADB5] w-28 rounded-full px-2 py-1
-            hover:scale-105 transition ease-in-out font-medium
-            hover:bg-[#00ADB5]/80 hover:text-white drop-shadow-xl"
-          >
-            Ver más
-            <Derecha />
-          </a>
-
-          <footer class="text-md text-gray-400 mt-auto pb-2">
-            <time
-              datetime="2023-12-28"
-              class="px-2 rounded-md bg-gray-300/45 text-gray-600/90"
-              >28/12/2023</time
-            >
-          </footer>
-        </div>
-      </div>
-    </article> -->
-
-    <!-- PokeCard -->
-
-    <!-- <article
-      class="lg:col-span-1 border flex flex-col items-center bg-white/90 rounded-md gap-2"
-    >
-      <div class="overflow-y-hidden max-h-32 rounded-t-md">
-        <img src="previewPokemon.webp" alt="ejemploPokemon" loading="lazy" />
-      </div>
-      <div class="flex flex-col flex-grow justify-center items-start px-4">
-        <div class="flex flex-row gap-2 justify-center items-center">
-          <a
-            href="https://github.com/D4souls/pokecard"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-2xl font-semibold flex flex-row justify-center items-center hover:underline"
-          >
-            <Link />
-             PokeCard
-          </a>
-          <Angular />
-          <Tailwind />
-        </div>
-        <hr class="w-full border-gray-200 my-1" />
-        <div class="flex flex-col flex-grow gap-4">
-          <p
-            class="text-gray-500 font-normal text-md lg:text-xl md:text-md line-clamp-3"
-          >
-            Aplicación web para editar imágenes con estilo personalizado de
-            carta Pokémon. Puedes elegir entre todas las variedades que hay,
-            personalizar el nombre, la descripción de la carta y darle un efecto
-            3D. ¡Comparte tus creaciones con los amigos!
-          </p>
-          <a
-            href="https://github.com/D4souls/pokecard/blob/main/README.md"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-lg text-white/90
-            flex flex-row justify-center items-center
-            bg-[#00ADB5] w-28 rounded-full px-2 py-1
-            hover:scale-105 transition ease-in-out font-medium
-            hover:bg-[#00ADB5]/80 hover:text-white drop-shadow-xl"
-          >
-            Ver más
-            <Derecha />
-          </a>
-          <footer class="text-md text-gray-400 mt-auto pb-2">
-            <span class="px-2 rounded-md bg-gray-300/45 text-gray-600/90"
-              >Próximamente</span
-            >
-          </footer>
-        </div>
-      </div>
-    </article> -->
-  </div>
 </div>
