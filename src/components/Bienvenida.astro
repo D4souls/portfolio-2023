@@ -37,7 +37,12 @@ import Abajo from "./img/Abajo.astro";
       sergioavilamacho12@gmail.com
     </a>
   </div>
-  <div class="flex flex-col justify-center items-center lg:mt-48 md:mt-24 mt-16 hover:scale-110 transition-all delay-200 w-10 self-center" id="flecha">
+  <div 
+    class="
+    flex flex-col justify-center items-center 
+    lg:mt-48 md:mt-24 mt-16 w-10 
+    self-center absolute lg:bottom-8 bottom-10
+    hover:scale-110 transition-all delay-200 " id="flecha">
     <a href="#sobremi" class="bg-black/85 p-1 rounded-lg">
       <Abajo/>
     </a>
@@ -57,7 +62,7 @@ import Abajo from "./img/Abajo.astro";
       transform: translateY(0);
     }
     50% {
-      transform: translateY(-10px); /* Puedes ajustar la distancia de la flotación aquí */
+      transform: translateY(-10px);
     }
   }
 
