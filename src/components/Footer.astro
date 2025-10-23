@@ -10,7 +10,7 @@ import logo from "../images/logoportfolio2023.webp";
   >
     <span class="text-white/90 dark:text-gray-400 flex flex-row justify-center items-center gap-2"
       >
-      © 2023 <a href="https://sam-portfolio2023.netlify.app/" class="hover:underline"
+      © <span id="currentYear"></span> <a href="https://sam-portfolio2023.netlify.app/" class="hover:underline"
         >Sam Develop.</a
       >Todos los derechos reservados.
     </span>
@@ -32,3 +32,10 @@ import logo from "../images/logoportfolio2023.webp";
     </ul>
   </div>
 </footer>
+
+<script>
+  const yearElement = document.getElementById('currentYear');
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear().toString();
+  }
+</script>
